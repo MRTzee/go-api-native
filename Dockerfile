@@ -14,7 +14,6 @@ COPY --from=builder /bin/api-binary /bin/api-binary
 COPY --from=builder --chown=nonroot /app/.env /
 COPY --from=builder --chown=nonroot /app/.env /bin
 COPY --from=builder --chown=nonroot /app/.env /app
-COPY --from=builder --chown=nonroot /app/views /app/views
 EXPOSE 8080
 
 ENTRYPOINT ["/bin/api-binary"]
